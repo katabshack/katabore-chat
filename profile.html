@@ -2,18 +2,31 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mon Profil - Katabore.Ai</title>
+    <title>Mon Profil</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="auth-container">
+<body style="display:flex; align-items:center; justify-content:center;">
+    
+    <div class="profile-card">
+        <div class="profile-avatar-large">K</div>
         <h2>Mon Profil</h2>
-        <div class="profile-info">
-            <p>Connecté en tant que : <strong id="user-email">Chargement...</strong></p>
-        </div>
-        <button id="logout-btn">Se Déconnecter</button>
-        <p style="margin-top: 20px;"><a href="index.html">Retourner au Chat</a></p>
+        <p class="profile-email" id="user-email">Chargement...</p>
+        <button id="logout-btn" class="btn-logout">Se Déconnecter</button>
+        <a href="index.html" class="link-back">← Retourner au Chat</a>
     </div>
+
+    <!-- MODAL DE DÉCONNEXION -->
+    <div id="logout-modal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Se déconnecter ?</h3>
+            <p style="color: #aaa; margin-top: 10px;">Vous devrez vous reconnecter pour accéder à vos chats.</p>
+            <div class="modal-actions">
+                <button id="cancel-logout" class="btn-modal btn-cancel">Annuler</button>
+                <button id="confirm-logout" class="btn-modal btn-confirm">Oui, partir</button>
+            </div>
+        </div>
+    </div>
+
     <script src="profile.js" defer></script>
 </body>
 </html>

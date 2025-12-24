@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         eye: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5C21.27 7.61 17 4.5 12 4.5zm0 10c-2.48 0-4.5-2.02-4.5-4.5S9.52 5.5 12 5.5s4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5zm0-7C10.62 7.5 9.5 8.62 9.5 10s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5S13.38 7.5 12 7.5z"/></svg>`,
         eyeOff: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L21.73 22 23 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.16-.08.33-.08.5 0 1.66 1.34 3 3 3 .17 0 .34-.03.5-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"/></svg>`
     };
-    
+
     const showMessage = (message, type) => {
         if (messageContainer) {
             messageContainer.textContent = message;
@@ -49,9 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await response.json();
 
                 if (response.ok) {
-                    showMessage("Inscription réussie ! Veuillez vérifier vos e-mails pour confirmer votre compte.", 'success');
+                    // MESSAGE MODIFIÉ AVEC COMPTE À REBOURS
+                    showMessage("Compte créé avec succès ! Redirection vers la connexion...", 'success');
+
                     email.value = '';
                     password.value = '';
+
+                    // REDIRECTION AUTOMATIQUE APRÈS 2 SECONDES
+                    setTimeout(() => {
+                        window.location.href = 'login.html';
+                    }, 2000);
+
                 } else {
                     // Gère les erreurs spécifiques de Supabase
                     let errorMessage = data.error;

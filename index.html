@@ -23,26 +23,19 @@
         <main id="chat-area">
             <header id="main-header">
                 <div class="header-left">
-                    <button id="toggle-sidebar-btn" title="Ouvrir/Fermer le menu">
+                    <button id="toggle-sidebar-btn" title="Menu">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
                     <span class="header-title">Katabore.Ai</span>
                 </div>
                 <div class="header-right">
-                    <div id="header-menu-container" style="position: relative;">
-                        <button id="header-menu-btn" class="header-action-btn" title="Paramètres">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 8C13.1046 8 14 7.10457 14 6C14 4.89543 13.1046 4 12 4C10.8954 4 10 4.89543 10 6C10 7.10457 10.8954 8 12 8ZM12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14ZM12 20C13.1046 20 14 19.1046 14 18C14 16.8954 13.1046 16 12 16C10.8954 16 10 16.8954 10 18C10 19.1046 10.8954 20 12 20Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </button>
-                    </div>
-                    <!--<div href="profile.html" class="profile-icon" title="Profil">K</div>-->
+                    <!-- BOUTON POUBELLE (Visible) -->
+                    <button id="delete-chat-btn" class="header-action-btn" title="Supprimer le chat" style="display:none; color: #ef4444;">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                    
                     <a href="profile.html" class="profile-icon" title="Profil">K</a>
                 </div>
             </header>
@@ -52,9 +45,9 @@
                     <div id="welcome-screen">
                         <h2 class="welcome-title">Katabore.Ai</h2>
                         <div class="suggestion-chips">
-                            <button class="chip">Donne-moi 3 idées de noms de projet</button>
-                            <button class="chip">Génère un squelette HTML/CSS</button>
                             <button class="chip">Explique le concept de l'IA</button>
+                            <button class="chip">Raconte une histoire drôle</button>
+                            <button class="chip">Code une page HTML simple</button>
                         </div>
                     </div>
                 </div>
@@ -62,33 +55,35 @@
                     <div id="image-preview-container"></div>
                     <div id="input-container">
                         <button id="attach-file-btn" class="input-action-btn" title="Joindre un fichier">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10 14.5L10 5.5C10 3.84315 11.3431 2.5 13 2.5C14.6569 2.5 16 3.84315 16 5.5L16 13.5C16 15.9853 14.2091 18 12 18C9.79086 18 8 15.9853 8 13.5L8 6.5"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14.5L10 5.5C10 3.84315 11.3431 2.5 13 2.5C14.6569 2.5 16 3.84315 16 5.5L16 13.5C16 15.9853 14.2091 18 12 18C9.79086 18 8 15.9853 8 13.5L8 6.5"></path></svg>
                         </button>
                         <input type="file" id="file-input" accept="image/*" style="display: none;">
                         <textarea id="user-input" placeholder="Écrivez votre message..." rows="1"></textarea>
                         <button id="send-btn" title="Envoyer">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24"
-                                height="24">
-                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div id="scroll-buttons">
-                <button id="scroll-top-btn" title="Remonter">↑</button>
-                <button id="scroll-bottom-btn" title="Descendre">↓</button>
-            </div>
+            <!-- BOUTON SCROLL DOWN SEULEMENT -->
+            <button id="scroll-bottom-btn" title="Descendre">↓</button>
+
         </main>
     </div>
+
+    <!-- MODAL DE SUPPRESSION -->
+    <div id="delete-modal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Supprimer le chat ?</h3>
+            <p style="color: #aaa; margin-top: 10px;">Cette action est irréversible.</p>
+            <div class="modal-actions">
+                <button id="cancel-delete" class="btn-modal btn-cancel">Annuler</button>
+                <button id="confirm-delete" class="btn-modal btn-confirm">Supprimer</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js" defer></script>
 </body>
-
 </html>

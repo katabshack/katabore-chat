@@ -235,3 +235,107 @@ html, body {
 }
 #message-container.success { background-color: #28a745; color: white; display: block; }
 #message-container.error { background-color: #bb2d3b; color: white; display: block; }
+
+/* Animation des 3 points */
+.typing-indicator {
+    padding: 15px 20px;
+    background-color: var(--bot-message-bg);
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background-color: #a0a0a0;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+.typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
+
+/* --- PROFIL REFAIT --- */
+.profile-card {
+    background-color: var(--sidebar-bg-color);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.profile-avatar-large {
+    width: 80px; height: 80px;
+    background-color: var(--accent-color);
+    color: white; font-size: 32px; font-weight: bold;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px auto;
+}
+.profile-email { font-size: 1.2rem; margin-bottom: 30px; color: var(--primary-text-color); }
+.btn-logout {
+    background-color: #ef4444; /* Rouge danger */
+    color: white; padding: 12px 24px; border-radius: 8px;
+    border: none; font-weight: bold; cursor: pointer; width: 100%;
+    transition: background 0.2s;
+}
+.btn-logout:hover { background-color: #dc2626; }
+.link-back { display: block; margin-top: 20px; color: var(--secondary-text-color); font-size: 14px; }
+.link-back:hover { color: var(--primary-text-color); }
+
+/* --- MODAL CONFIRMATION --- */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none; justify-content: center; align-items: center; z-index: 2000;
+}
+.modal-overlay.active { display: flex; }
+.modal-box {
+    background: var(--surface-color, #2d2f32);
+    padding: 25px; border-radius: 12px;
+    width: 90%; max-width: 350px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+.modal-actions { margin-top: 20px; display: flex; gap: 10px; justify-content: center; }
+.btn-modal { padding: 10px 20px; border-radius: 6px; border: none; cursor: pointer; font-weight: bold; }
+.btn-cancel { background: var(--bot-message-bg); color: white; }
+.btn-confirm { background: #ef4444; color: white; }
+
+/* Cache le bouton scroll par défaut */
+#scroll-bottom-btn {
+    display: none; /* Caché par défaut */
+    position: absolute; bottom: 120px; right: 40px;
+    width: 35px; height: 35px; border-radius: 50%;
+    background: var(--bot-message-bg); border: 1px solid var(--border-color);
+    color: white; cursor: pointer; z-index: 90;
+    font-weight: bold;
+}
+#scroll-bottom-btn.show { display: flex; align-items: center; justify-content: center; }
+
+/* S'assurer que les icônes du header sont visibles */
+.header-action-btn svg {
+    display: block;
+    stroke: currentColor;
+}
+
+/* Le bouton scroll bas */
+#scroll-bottom-btn {
+    display: none; /* Caché par défaut */
+    position: absolute; bottom: 120px; right: 40px;
+    width: 35px; height: 35px; border-radius: 50%;
+    background: var(--bot-message-bg); border: 1px solid var(--border-color);
+    color: white; cursor: pointer; z-index: 90;
+    font-weight: bold;
+    align-items: center; justify-content: center;
+}
+#scroll-bottom-btn.show { display: flex; }

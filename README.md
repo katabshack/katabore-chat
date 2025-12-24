@@ -1,0 +1,42 @@
+# 🤖 Katabore Chat
+
+Un clone de chat IA moderne et responsive, propulsé par l'API Google Gemini.
+Ce projet permet de discuter avec une IA, de gérer plusieurs conversations et de conserver un historique (session temporaire).
+
+![Aperçu du projet](https://via.placeholder.com/800x400?text=Capture+d'ecran+Katabore+Chat)
+*(Tu pourras remplacer ce lien par ton propre screenshot plus tard)*
+
+## ✨ Fonctionnalités
+
+- 💬 **Discussion en temps réel** avec Gemini (Streaming textuel).
+- 🧠 **Mémoire contextuelle** : L'IA se souvient de ce que vous avez dit plus tôt.
+- 🎨 **Interface Moderne** : Thème sombre (Dark Mode), responsive et animations fluides.
+- 🔐 **Authentification** : Système de création de compte et de connexion (Stockage en mémoire pour la démo).
+- 🗑️ **Gestion des chats** : Création, historique et suppression de conversations.
+- 📸 **Analyse d'images** : Possibilité d'envoyer des images à l'IA.
+
+## 🚀 Installation
+
+1. **Cloner le projet**
+   ```bash
+   git clone https://github.com/TON_PSEUDO/katabore-chat.git
+   cd katabore-chat
+
+Installer les dépendances
+
+npm install
+Configurer la Clé API
+
+Créez un fichier .env à la racine.
+Ajoutez votre clé Google Gemini :
+text
+API_KEY=Votre_Cle_API_Ici
+Lancer le serveur
+
+npm run dev
+Rendez-vous sur http://localhost:3000.
+
+🛠️ Technologies
+Frontend : HTML5, CSS3, JavaScript (Vanilla).
+Backend : Node.js, Express.
+IA : Google Generative AI SDK.
