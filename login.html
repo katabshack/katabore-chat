@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - Katabore.Ai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Se connecter</h2>
+        <div id="message-container"></div>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <div class="password-input-wrapper">
+                    <input type="password" id="password" required>
+                    <button type="button" class="toggle-password"></button>
+                </div>
+            </div>
+            <button type="submit">Se connecter</button>
+        </form>
+        <p>Pas de compte ? <a href="signup.html">S'inscrire</a></p>
+    </div>
+    <script src="auth.js" defer></script>
+</body>
+</html>
