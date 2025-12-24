@@ -22,11 +22,11 @@ Ce projet permet de discuter avec une IA, de gérer plusieurs conversations et d
          git clone https://github.com/TON_PSEUDO/katabore-chat.git
          cd katabore-chat
 
-2.Installer les dépendances
+2. **Installer les dépendances**
 
       npm install
       
-3.Configurer la Clé API
+3. **Configurer la Clé API**
 
 Créez un fichier .env à la racine.
 
@@ -34,7 +34,7 @@ Ajoutez votre clé Google Gemini :
 
       API_KEY=Votre_Cle_API_Ici
 
-4.Lancer le serveur
+4. **Lancer le serveur**
 
       npm run dev
 
