@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmDeleteBtn = document.getElementById('confirm-delete');
     const cancelDeleteBtn = document.getElementById('cancel-delete');
 
-    const BACKEND_URL = 'http://localhost:3000';
+    const BACKEND_URL = window.location.origin;
 
     let chats = [];
     let activeChatId = null;
