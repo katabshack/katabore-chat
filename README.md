@@ -3,8 +3,8 @@
 Un clone de chat IA moderne et responsive, propulsé par l'API Google Gemini.
 Ce projet permet de discuter avec une IA, de gérer plusieurs conversations et de conserver un historique (session temporaire).
 
-![Aperçu du projet](https://via.placeholder.com/800x400?text=Capture+d'ecran+Katabore+Chat)
-*(Tu pourras remplacer ce lien par ton propre screenshot plus tard)*
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/86fd8c66-a725-4ce1-a064-511f21ed9f62" />
+
 
 ## ✨ Fonctionnalités
 
