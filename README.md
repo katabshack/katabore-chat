@@ -24,7 +24,7 @@ Ce projet permet de discuter avec une IA, de gérer plusieurs conversations et d
 
 2. **Installer les dépendances**
 
-      npm install
+               npm install
       
 3. **Configurer la Clé API**
 
@@ -36,7 +36,7 @@ Ajoutez votre clé Google Gemini :
 
 4. **Lancer le serveur**
 
-      npm run dev
+               npm run dev
 
 Rendez-vous sur http://localhost:3000.
 
