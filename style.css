@@ -100,7 +100,7 @@ html, body {
 #chat-container { width: 100%; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; flex-grow: 1; overflow: hidden; }
 #chat-box { flex-grow: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
 .message { padding: 10px 0; position: relative; }
-.message-content { padding: 1px 24px; border-radius: 12px; line-height: 1.8; word-wrap: break-word; }
+.message-content { padding: 10px 24px; border-radius: 12px; line-height: 1.8; word-wrap: break-word; }
 .user-message .message-content { background-color: var(--user-message-bg); color: white; float: right; max-width: 80%; }
 .bot-message .message-content { float: left; max-width: 95%; } /* pour meuilleur lisibilité */
 /*.bot-message .message-content { background-color: var(--bot-message-bg); float: left; max-width: 95%; }*/
