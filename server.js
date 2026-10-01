@@ -14,7 +14,7 @@ if (!GEN_AI_KEY) {
 }
 
 const genAI = new GoogleGenerativeAI(GEN_AI_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-3-pro-preview" });
+const model = genAI.getGenerativeModel({ model: "gemini-3.1-pro-preview" });
 
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
